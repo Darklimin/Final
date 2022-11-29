@@ -1,0 +1,11 @@
+{
+    "name": "dariuskliminskas/final",
+    "autoload": {
+        "psr-4": {
+            "final\\": "/"
+        }
+    },
+    "require": {
+        "twbs/bootstrap": "^5.2"
+    }
+}

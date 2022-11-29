@@ -1,0 +1,255 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    height: 100vh;
+    background-color: #bdbbbb;
+}
+
+body {
+    margin: 0;
+    padding: 12px 15px;
+    min-height: 100%;
+    width: 90vw;
+    margin: auto;
+}
+
+section{
+    width: 100%;
+}
+
+section.images-list {
+    display: inline-flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+section.single-article {
+    text-align: center;
+}
+
+article.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #dad8d8;
+    box-sizing: border-box;
+    line-height: 1.2;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px 0px #d3d3d3;
+    transition: all 250ms ease-in;
+    width: 100%;
+    margin: 0.4%;
+}
+
+
+article.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+article.card>* {
+    margin-bottom: 15px;
+
+}
+
+article .card-description,
+article .card-details {
+    font-size: 1em;
+}
+
+article.card.small {
+    width: 32.5%;
+}
+
+article.card.small img {
+    height: 400px;
+}
+
+article.card.small img:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 9px 2px #d3d3d3;
+}
+
+article.card.smaller {
+    width: 32.5%;
+}
+
+article.card.smaller img {
+    height: 400px;
+    margin-bottom: 0;
+}
+
+article.card.smaller img:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 9px 2px #d3d3d3;
+}
+
+article>.card-details,
+article>.card-description {
+    letter-spacing: 1.3px;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+article table {
+    font-size: 0.9em;
+    width: 100%;
+    text-align: left;
+}
+
+article table tr {
+    vertical-align: top;
+}
+
+article table th {
+    white-space: nowrap;
+}
+
+article table td {
+    padding-left: 5px;
+}
+
+img.big-user-photo {
+    padding-top: 2rem;
+    max-width: 50%;
+}
+
+.red {
+    background-color: rgb(142, 15, 15);
+}
+
+.badge {
+    /* outline: 1px black solid; */
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 80px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 1px 0 black;
+    /* -webkit-text-fill-color: white; */
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke: 0.7px rgb(103, 99, 99);
+
+}
+
+.badge.red {
+    background-color: rgb(220, 61, 61);
+}
+
+.badge.yellow {
+    background-color: rgb(240, 240, 40);
+}
+
+.badge.green {
+    background-color: rgb(38, 184, 38);
+}
+
+.badge.purple {
+    background-color: rgb(217, 61, 220);
+}
+
+.buttons {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #3f3f48;
+    color: white;
+    box-shadow: 0px 0px 2px 1px #030303;
+    transition: all 500ms ease;
+    margin-left: 5px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.button:hover {
+    background-color: #6161cf;
+}
+
+/* message box */
+.msg-box {
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 15px;
+    background-color: var(--blue);
+    margin: 20px;
+    box-shadow: 0 0 2px 1px #dc3545;
+    border-radius: 3px;
+    transition: all 300ms;
+    min-width: 300px;
+}
+
+.msg-body {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.msg-box:hover {
+    opacity: 1;
+}
+
+.danger {
+    background-color: var(--bs-red);
+}
+
+.success {
+    background-color: var(--bs-green);
+}
+
+
+.clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamp-lines-2 {
+    -webkit-line-clamp: 2;
+}
+
+#login-form {
+    width: 50%;
+    margin: auto;
+}
+
+#login-form h1, h3 {
+    text-align: center;
+}
+
+#login-form form textarea,
+#login-form form input {
+    background-color: rgb(225, 224, 224);
+}
