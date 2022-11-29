@@ -2,8 +2,7 @@
 
 require_once __DIR__ . "/../Models/User.php";
 require_once __DIR__ . "/../Models/Image.php";
-require_once __DIR__ . "/../Controllers/OwnersController.php";
-
+require_once __DIR__ . "/../auth/Authenticate.php";
 
 class UsersController
 {
@@ -29,10 +28,23 @@ class UsersController
 
     public function store(array $request): void
     {
-        $user = (new User());
-        $data = $user->uploadPhoto($request);
-        unset($data['files']);
-        $user->create($data);
+        $status = 1;
+        $input = [];
+        if ($request) {
+            foreach ($request as $name => $value) {
+                if (!$value) {
+                    $status = 0;
+                } else $input[$name] = $value;
+            }
+        } else $status = 0;
+        if ($status === 1) {
+            $user = (new User());
+            $data = $user->uploadPhoto($request);
+            unset($data['files']);
+            $user->create($data);
+        } else {
+            $_SESSION['errors'] = ["You must correctly fill all fields"];
+        }
     }
 
     public function edit($id)

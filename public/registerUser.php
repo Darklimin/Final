@@ -16,7 +16,7 @@ $auth = new Authenticate();
 if($_POST){
     $auth->login($_POST);
 }else{
-    view(__DIR__ . '/../Views/app/auth/login_form.php');
+    view(__DIR__ . '/../../Views/users/register_form.php');
 }
 
 header('Location: index.php');

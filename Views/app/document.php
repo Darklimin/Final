@@ -14,6 +14,9 @@
 
 <body>
 <header>
+    <div class="message-wrapper">
+        <?= errors(); ?>
+    </div>
     <nav>
         <ul>
             <?php if (!isset($_SESSION['is_authenticated']) ?? '') { ?>

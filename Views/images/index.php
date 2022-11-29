@@ -2,7 +2,7 @@
 <section class="images-list">
     <?php
     foreach ($images as $image) {
-    ?>
+        ?>
         <article class="card small">
             <header>
                 <img src="<?= imagesUrl(($image['image'] ?? '')); ?>">
@@ -19,7 +19,6 @@
                 <a class="button" href="show.php?id=<?= $image['id']; ?>">Show</a>
             </div>
         </article>
-
     <?php } ?>
 </section>
 </body>

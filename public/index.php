@@ -14,4 +14,8 @@ if (!($_SESSION['is_authenticated'] ?? '')) {
 $image = new ImagesController();
 $image->index();
 
+$message = new Message();
+$message->errors();
+
+
 

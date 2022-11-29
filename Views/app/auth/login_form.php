@@ -1,6 +1,7 @@
 <section id="login-form">
+    <h1>Images gallery</h1>
     <heading>
-        <h1>Log in into Images gallery</h1>
+        <h2>Log in</h2>
     </heading>
     <div>
         <form action="<?= publicUrl('login.php'); ?>" method="POST">

@@ -2,8 +2,8 @@
 
 class Message
 {
-    public const SUCCESS_HEADER = 'Operacija sėkminga!!!';
-    public const ERROR_HEADER = 'Operacija nesėkminga!!!';
+    public const SUCCESS_HEADER = 'Success';
+    public const ERROR_HEADER = 'Error';
 
     public function __construct(
         public $header = '',
@@ -21,7 +21,6 @@ class Message
             if (!is_array($errors)) {
                 $errors = (array)$errors;
             }
-            // var_dump($errors);die();
             unset($_SESSION['errors']);
         }
 
@@ -37,7 +36,8 @@ class Message
             $this->type = 'danger';
 
             foreach ($errors as $error) {
-                $this->body .= "<p>$error</p>";
+//                $this->body .= "<p>$error</p>";
+                $this->body .= $error;
             }
 
             return $this->message();

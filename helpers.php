@@ -1,5 +1,12 @@
-
 <?php
+
+require_once __DIR__ . "/Message.php";
+
+function errors(): void
+{
+    echo (new Message())->errors();
+}
+
 function redirectIfNotAuthenticated(string $url): void
 {
     if (!($_SESSION['is_authenticated'] ?? '')) {
@@ -11,6 +18,12 @@ function redirect(string $url): void
 {
     header("Location: {$url}");
     exit();
+}
+
+function redirectWithMessages(string $url, array $message): void
+{
+    $_SESSION = array_merge($_SESSION, $message);
+    redirect($url);
 }
 
 function dump(...$variables)

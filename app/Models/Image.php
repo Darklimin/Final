@@ -4,7 +4,6 @@ require_once __DIR__ . "/../../core/Connections.php";
 require_once __DIR__ . "/../../core/UploadFiles.php";
 require_once __DIR__ . "/../../helpers.php";
 require_once __DIR__ . "/../../Message.php";
-require_once __DIR__ . "/../../src/libs/flash.php";
 
 class Image extends Connections
 {
@@ -84,16 +83,18 @@ class Image extends Connections
 
             $stmt = $this->connection->prepare($sql);
             $stmt->execute($newData);
-        } else $message=((new Message())->message());
+        } else {
+            $_SESSION['errors'] = ["You can't vote for your images"];
+        }
     }
 
     public function delete(int $id)
     {
-            $sql = "DELETE FROM 
+        $sql = "DELETE FROM 
                     {$this->table}
                 WHERE id = ?";
-            $stmt = $this->connection->prepare($sql);
-            $stmt->execute([$id]);
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$id]);
     }
 
     public function uploadImage(array $data)

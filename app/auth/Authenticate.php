@@ -20,6 +20,7 @@ class Authenticate
         $model = (new $this->model)->getByCredentials($credentials['email']);
 
         if (!$model) {
+            $_SESSION['errors'] = ["Enter email and password to log in"];
             redirect('login.php');
         }
 
@@ -29,8 +30,6 @@ class Authenticate
             $this->setAuthenticated($model);
 
             redirect('index.php');
-        } else {
-            redirect('login.php');
         }
 
     }

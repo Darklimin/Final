@@ -1,4 +1,4 @@
-<form id="login-form"action="<?= publicUrl('registerUser.php'); ?>" method="post" enctype="multipart/form-data">
+<form id="login-form" action="<?= publicUrl('registerUser.php'); ?>" method="post" enctype="multipart/form-data">
     <h1>Sign Up</h1>
     <div>
         <label for="first_name">First name:</label>

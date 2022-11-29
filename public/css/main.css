@@ -3,10 +3,10 @@
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
-    --bs-red: #dc3545;
+    --bs-red: #dc9ba0;
     --bs-orange: #fd7e14;
     --bs-yellow: #ffc107;
-    --bs-green: #198754;
+    --bs-green: #448668;
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
     --bs-black: #000;
@@ -31,7 +31,7 @@ body {
     margin: auto;
 }
 
-section{
+section {
     width: 100%;
 }
 
@@ -39,6 +39,7 @@ section.images-list {
     display: inline-flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 section.single-article {
@@ -65,12 +66,10 @@ article.card img {
     width: 100%;
     object-fit: cover;
     object-position: center;
-
 }
 
-article.card>* {
+article.card > * {
     margin-bottom: 15px;
-
 }
 
 article .card-description,
@@ -87,8 +86,8 @@ article.card.small img {
 }
 
 article.card.small img:hover {
-    transform: scale(1.05);
-    box-shadow: 2px 2px 9px 2px #d3d3d3;
+    transform: scale(1.005);
+    box-shadow: 10px 10px 10px 10px #d3d3d3;
 }
 
 article.card.smaller {
@@ -101,12 +100,12 @@ article.card.smaller img {
 }
 
 article.card.smaller img:hover {
-    transform: scale(1.05);
-    box-shadow: 2px 2px 9px 2px #d3d3d3;
+    transform: scale(1.005);
+    box-shadow: 10px 10px 10px 10px #d3d3d3;
 }
 
-article>.card-details,
-article>.card-description {
+article > .card-details,
+article > .card-description {
     letter-spacing: 1.3px;
     text-align: center;
     padding: 0 15px;
@@ -155,7 +154,6 @@ img.big-user-photo {
     /* -webkit-text-fill-color: white; */
     /* Will override color (regardless of order) */
     -webkit-text-stroke: 0.7px rgb(103, 99, 99);
-
 }
 
 .badge.red {
@@ -179,10 +177,12 @@ img.big-user-photo {
     align-items: end;
     justify-content: center;
     flex: 1;
+    border-radius: 2px;
 }
 
 .button {
     display: inline-block;
+    border-radius: 2px;
     padding: 5px 10px;
     background: #3f3f48;
     color: white;
@@ -194,7 +194,7 @@ img.big-user-photo {
 }
 
 .button:hover {
-    background-color: #6161cf;
+    background-color: #7d7d83;
 }
 
 /* message box */
@@ -223,12 +223,14 @@ img.big-user-photo {
 
 .danger {
     background-color: var(--bs-red);
+    text-align: center;
+    padding: 0.4rem 0rem;
 }
 
 .success {
     background-color: var(--bs-green);
+    text-align: center;
 }
-
 
 .clamp {
     display: -webkit-box;
@@ -249,7 +251,18 @@ img.big-user-photo {
     text-align: center;
 }
 
-#login-form form textarea,
-#login-form form input {
+#login-form h2 {
+    text-align: center;
+    font-size: x-large;
+}
+
+#login-form textarea,
+#login-form input {
     background-color: rgb(225, 224, 224);
 }
+
+.big-text {
+    font-size: x-large;
+}
+
+
